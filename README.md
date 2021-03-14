@@ -1,9 +1,9 @@
 # CatApiValidation
 API Dataset Validation
 
-Currently the 2 of the tests will fail.
+Currently two of the tests will fail.
 
-Data Validation Test
+Data Validation Tests
 
 1. isFactsAllValid
   Test: validates is the cat facts returened via "/facts" all match to the facts in the supplied dataset.
