@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: cattest.tests.TestAPI
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 64.677 sec <<< FAILURE!
+isAllFactsIdValid(cattest.tests.TestAPI)  Time elapsed: 54.033 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:751)
+	at org.testng.Assert.assertEquals(Assert.java:761)
+	at cattest.tests.TestAPI.isAllFactsIdValid(TestAPI.java:129)
+
+isFactsAllValid(cattest.tests.TestAPI)  Time elapsed: 1.655 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:751)
+	at org.testng.Assert.assertEquals(Assert.java:761)
+	at cattest.tests.TestAPI.isFactsAllValid(TestAPI.java:113)
+

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\kevin.hoyle\AppData\Local\Temp\testng-eclipse-1012356826\testng-customsuite.xml</span>
+                    <span>C:\Users\kevin.hoyle\AppData\Local\Temp\testng-eclipse--1964129652\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">7 methods, 2 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cattest.tests.TestAPI" class="method navigator-link" hash-for-method="isAllFactsIdValid">isAllFactsIdValid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cattest.tests.TestAPI" class="method navigator-link" hash-for-method="isFactsAllValid">isFactsAllValid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +121,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestAPI" class="method navigator-link" hash-for-method="f">f</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cattest.tests.TestAPI" class="method navigator-link" hash-for-method="isInValidFactsHTTPStatusCode">isInValidFactsHTTPStatusCode</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestAPI" class="method navigator-link" hash-for-method="testFacts">testFacts</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cattest.tests.TestAPI" class="method navigator-link" hash-for-method="isInValidFactsIdHTTPStatusCode">isInValidFactsIdHTTPStatusCode</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestAPI" class="method navigator-link" hash-for-method="testFactsId">testFactsId</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="cattest.tests.TestAPI" class="method navigator-link" hash-for-method="isJSOnStructureCorrect">isJSOnStructureCorrect</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cattest.tests.TestAPI" class="method navigator-link" hash-for-method="isValidFactsHTTPStatusCode">isValidFactsHTTPStatusCode</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="cattest.tests.TestAPI" class="method navigator-link" hash-for-method="isValidFactsIdHTTPStatusCode">isValidFactsIdHTTPStatusCode</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -127,31 +156,141 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">TestAPI</span>
+              <img src="failed.png"/>
+              <span class="class-name">cattest.tests.TestAPI</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="f">
-                  </a> <!-- f -->
-                  <span class="method-name">f</span>
+                  <a name="isAllFactsIdValid">
+                  </a> <!-- isAllFactsIdValid -->
+                  <span class="method-name">isAllFactsIdValid</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:751)
+	at org.testng.Assert.assertEquals(Assert.java:761)
+	at cattest.tests.TestAPI.isAllFactsIdValid(TestAPI.java:129)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testFacts">
-                  </a> <!-- testFacts -->
-                  <span class="method-name">testFacts</span>
+                  <a name="isFactsAllValid">
+                  </a> <!-- isFactsAllValid -->
+                  <span class="method-name">isFactsAllValid</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:751)
+	at org.testng.Assert.assertEquals(Assert.java:761)
+	at cattest.tests.TestAPI.isFactsAllValid(TestAPI.java:113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">cattest.tests.TestAPI</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="isInValidFactsHTTPStatusCode">
+                  </a> <!-- isInValidFactsHTTPStatusCode -->
+                  <span class="method-name">isInValidFactsHTTPStatusCode</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testFactsId">
-                  </a> <!-- testFactsId -->
-                  <span class="method-name">testFactsId</span>
+                  <a name="isInValidFactsIdHTTPStatusCode">
+                  </a> <!-- isInValidFactsIdHTTPStatusCode -->
+                  <span class="method-name">isInValidFactsIdHTTPStatusCode</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isJSOnStructureCorrect">
+                  </a> <!-- isJSOnStructureCorrect -->
+                  <span class="method-name">isJSOnStructureCorrect</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isValidFactsHTTPStatusCode">
+                  </a> <!-- isValidFactsHTTPStatusCode -->
+                  <span class="method-name">isValidFactsHTTPStatusCode</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isValidFactsIdHTTPStatusCode">
+                  </a> <!-- isValidFactsIdHTTPStatusCode -->
+                  <span class="method-name">isValidFactsIdHTTPStatusCode</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,7 +298,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kevin.hoyle\AppData\Local\Temp\testng-eclipse-1012356826\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\kevin.hoyle\AppData\Local\Temp\testng-eclipse--1964129652\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -168,7 +307,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestAPI&quot;/&gt;
+      &lt;class name=&quot;cattest.tests.TestAPI&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -208,24 +347,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testFacts')
-data.setCell(0, 2, 'TestAPI')
-data.setCell(0, 3, 2550);
+data.setCell(0, 1, 'isAllFactsIdValid')
+data.setCell(0, 2, 'cattest.tests.TestAPI')
+data.setCell(0, 3, 54650);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testFactsId')
-data.setCell(1, 2, 'TestAPI')
-data.setCell(1, 3, 1226);
+data.setCell(1, 1, 'isInValidFactsHTTPStatusCode')
+data.setCell(1, 2, 'cattest.tests.TestAPI')
+data.setCell(1, 3, 2528);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'f')
-data.setCell(2, 2, 'TestAPI')
-data.setCell(2, 3, 13);
+data.setCell(2, 1, 'isFactsAllValid')
+data.setCell(2, 2, 'cattest.tests.TestAPI')
+data.setCell(2, 3, 2236);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'isJSOnStructureCorrect')
+data.setCell(3, 2, 'cattest.tests.TestAPI')
+data.setCell(3, 3, 1900);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'isValidFactsIdHTTPStatusCode')
+data.setCell(4, 2, 'cattest.tests.TestAPI')
+data.setCell(4, 3, 1202);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'isValidFactsHTTPStatusCode')
+data.setCell(5, 2, 'cattest.tests.TestAPI')
+data.setCell(5, 3, 1199);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'isInValidFactsIdHTTPStatusCode')
+data.setCell(6, 2, 'cattest.tests.TestAPI')
+data.setCell(6, 3, 1187);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -251,18 +406,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestAPI</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">f</span>
+              <div class="chronological-class-name">cattest.tests.TestAPI</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">isInValidFactsHTTPStatusCode</span>
+                <span class="method-start">129 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testFacts</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-name">isInValidFactsIdHTTPStatusCode</span>
+                <span class="method-start">2662 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testFactsId</span>
-                <span class="method-start">2569 ms</span>
+                <span class="method-name">isValidFactsHTTPStatusCode</span>
+                <span class="method-start">3850 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">isValidFactsIdHTTPStatusCode</span>
+                <span class="method-start">5050 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">isAllFactsIdValid</span>
+                <span class="method-start">6256 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">isFactsAllValid</span>
+                <span class="method-start">60908 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">isJSOnStructureCorrect</span>
+                <span class="method-start">63148 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
